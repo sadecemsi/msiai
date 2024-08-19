@@ -1,0 +1,55 @@
+{
+    "name": "msiai",
+    "version": "1.0.0",
+    "description": "Advanced artificial intelligence api service msiai",
+    "main": "index.js",
+    "scripts": {
+      "test": "node test.js"
+    },
+    "repository": {
+      "type": "git",
+      "url": "git+https://github.com/yourusername/msiai.git"
+    },
+    "keywords": [
+      "msiai",
+      "api",
+      "client",
+      "ai",
+      "chatgpt",
+      "gpt",
+      "discord",
+      "chat",
+      "chatbot",
+      "chatgpt4",
+      "chatgpt-4",
+      "openai",
+      "open-ai",
+      "smartest",
+      "bot",
+      "robot",
+      "axios",
+      "gemini",
+      "gemini-api",
+      "gemini-pro",
+      "google",
+      "discord-ai",
+      "discordai",
+      "yapay-zeka",
+      "claude",
+      "claude 3.5",
+      "anthropic",
+      "anthropic-api",
+      "claude-api",
+      "advanced-artificial-intelligence",
+      "artificial-intelligence"
+    ],
+    "author": "msi",
+    "license": "MIT",
+    "bugs": {
+      "url": "https://github.com/sadecemsi/msiai/issues"
+    },
+    "homepage": "https://github.com/sadecemsi/msiai#readme",
+    "dependencies": {
+      "axios": "^0.21.1"
+    }
+  }
