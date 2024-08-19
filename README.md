@@ -14,7 +14,7 @@
 
 # MSIAI
 
-> **A powerful library for interacting with the MSIAI API, providing access to advanced AI models.**
+> **MSIAI: A flexible API library offering streamlined access to diverse AI models. Enhance your projects with powerful machine learning capabilities and simplify complex AI integrations**
 
 > **MSIAI leverages cutting-edge language models to provide intelligent responses across a wide range of topics and languages.**
 
