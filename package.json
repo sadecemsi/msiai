@@ -45,9 +45,6 @@
     ],
     "author": "msi",
     "license": "MIT",
-    "bugs": {
-      "url": "https://github.com/sadecemsi/msiai/issues"
-    },
     "homepage": "https://github.com/sadecemsi/msiai#readme",
     "dependencies": {
       "axios": "^0.21.1"
