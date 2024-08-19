@@ -1,7 +1,5 @@
 
-<p align="center">
-  <img width=500 src="https://your-logo-url-here.com/msiai-logo.png" alt="MSIAI Logo">
-</p>
+
 
 <p align="center">
   <img src="https://img.shields.io/npm/v/msiai?style=for-the-badge" alt="npm version">
@@ -12,11 +10,17 @@
   </a>
 </p>
 
+<p align="center">
+  <a href="https://discord.gg/bdfd">
+    <img src="https://img.shields.io/discord/1085293868976709652?color=7289da&logo=discord&logoColor=white&style=for-the-badge" alt="Discord Server">
+  </a>
+</p>
+
 # MSIAI
 
 > **A powerful library for interacting with the MSIAI API, providing access to advanced AI models.**
 
-> **MSIAI responds to your questions in the language you use, supporting all languages.**
+> **MSIAI leverages cutting-edge language models to provide intelligent responses across a wide range of topics and languages.**
 
 ## 📦 Installation
 
@@ -28,7 +32,7 @@ pnpm add msiai
 
 ## 🚀 Quick Start
 
-### Example for JavaScript (Node.js):
+### JavaScript (Node.js)
 
 ```javascript
 const MSIAI = require('msiai');
@@ -48,6 +52,48 @@ msiai.createChatCompletion({
 .catch(error => {
   console.error('Error:', error.message);
 });
+```
+
+### TypeScript
+
+```typescript
+import MSIAI, { ChatCompletionOptions, ChatCompletionResponse } from 'msiai';
+
+const msiai = new MSIAI('YOUR_API_KEY');
+
+const options: ChatCompletionOptions = {
+  model: "gpt-4o-2024-08-06",
+  messages: [
+    { role: "system", content: "You are a helpful assistant." },
+    { role: "user", content: "What's the weather like today?" }
+  ]
+};
+
+msiai.createChatCompletion(options)
+  .then((response: ChatCompletionResponse) => {
+    console.log(response.choices[0].message.content);
+  })
+  .catch((error: Error) => {
+    console.error('Error:', error.message);
+  });
+```
+
+### Python
+
+```python
+from msiai import MSIAI
+
+msiai = MSIAI('YOUR_API_KEY')
+
+response = msiai.create_chat_completion(
+    model="gemini-1.5-pro-exp-0801",
+    messages=[
+        {"role": "system", "content": "You are a helpful assistant."},
+        {"role": "user", "content": "Tell me a joke."}
+    ]
+)
+
+print(response.choices[0].message.content)
 ```
 
 ## 📚 Available Models
@@ -128,13 +174,3 @@ To obtain an API key, please contact me via Discord:
 If you have any questions or suggestions, please join our Discord server:
 
 [Join Our Discord Server](https://discord.gg/bdfd)
-
----
-
-<p align="center">
-  <a href="https://discord.gg/bdfd">
-    <img src="https://img.shields.io/discord/1085293868976709652?color=7289da&logo=discord&logoColor=white&style=for-the-badge" alt="Discord Server">
-  </a>
-</p>
-
-
