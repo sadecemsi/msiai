@@ -1,10 +1,6 @@
-
-
-
 <p align="center">
   <img src="https://img.shields.io/npm/v/msiai?style=for-the-badge" alt="npm version">
   <img src="https://img.shields.io/npm/dt/msiai?style=for-the-badge" alt="npm downloads">
-  <img src="https://img.shields.io/npm/l/msiai?style=for-the-badge" alt="license">
   <a href="https://discord.com/users/657241749579759616" target="_blank">
     <img src="https://img.shields.io/badge/Discord-Support-7289DA?style=for-the-badge&logo=discord" alt="Discord Support">
   </a>
