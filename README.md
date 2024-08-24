@@ -1,14 +1,16 @@
+
 <p align="center">
   <img src="https://img.shields.io/npm/v/msiai?style=for-the-badge" alt="npm version">
   <img src="https://img.shields.io/npm/dt/msiai?style=for-the-badge" alt="npm downloads">
+  <img src="https://img.shields.io/npm/l/msiai?style=for-the-badge" alt="license">
   <a href="https://discord.com/users/657241749579759616" target="_blank">
     <img src="https://img.shields.io/badge/Discord-Support-7289DA?style=for-the-badge&logo=discord" alt="Discord Support">
   </a>
 </p>
 
 <p align="center">
-  <a href="https://discord.gg/bdfd">
-    <img src="https://img.shields.io/discord/1085293868976709652?color=7289da&logo=discord&logoColor=white&style=for-the-badge" alt="Discord Server">
+  <a href="https://discord.gg/msidev">
+    <img src="https://img.shields.io/discord/1275557243466678343?color=7289da&logo=discord&logoColor=white&style=for-the-badge" alt="Discord Server">
   </a>
 </p>
 
@@ -35,43 +37,35 @@ const MSIAI = require('msiai');
 
 const msiai = new MSIAI('YOUR_API_KEY');
 
-msiai.createChatCompletion({
-  model: "claude-3-5-sonnet-20240620",
-  messages: [
-    { role: "system", content: "You are a helpful assistant." },
-    { role: "user", content: "Hello, how are you?" }
-  ]
-})
-.then(response => {
-  console.log(response.choices[0].message.content);
-})
-.catch(error => {
-  console.error('Error:', error.message);
+msiai.chat({
+    model: "chatgpt-4o-latest",
+    content: "Merhaba, nasılsın?",
+    system: "Sen yardımcı bir asistansın."
+}).then(response => {
+    console.log(response.reply);
+}).catch(error => {
+    console.error(error.message);
 });
 ```
 
 ### TypeScript
 
 ```typescript
-import MSIAI, { ChatCompletionOptions, ChatCompletionResponse } from 'msiai';
+import MSIAI from 'msiai';
 
 const msiai = new MSIAI('YOUR_API_KEY');
 
-const options: ChatCompletionOptions = {
-  model: "gpt-4o-2024-08-06",
-  messages: [
-    { role: "system", content: "You are a helpful assistant." },
-    { role: "user", content: "What's the weather like today?" }
-  ]
-};
-
-msiai.createChatCompletion(options)
-  .then((response: ChatCompletionResponse) => {
-    console.log(response.choices[0].message.content);
-  })
-  .catch((error: Error) => {
-    console.error('Error:', error.message);
-  });
+msiai.chat({
+    model: "gpt-4o-2024-08-06",
+    content: "What's the weather like today?",
+    system: "You are a weather expert." 
+})
+.then(response => {
+    console.log(response.reply);
+})
+.catch(error => {
+    console.error(error.message);
+});
 ```
 
 ### Python
@@ -81,15 +75,13 @@ from msiai import MSIAI
 
 msiai = MSIAI('YOUR_API_KEY')
 
-response = msiai.create_chat_completion(
+response = msiai.chat(
     model="gemini-1.5-pro-exp-0801",
-    messages=[
-        {"role": "system", "content": "You are a helpful assistant."},
-        {"role": "user", "content": "Tell me a joke."}
-    ]
+    content="Tell me a joke.",
+    system="You are a comedian." 
 )
 
-print(response.choices[0].message.content)
+print(response['reply'])
 ```
 
 ## 📚 Available Models
@@ -169,4 +161,4 @@ To obtain an API key, please contact me via Discord:
 
 If you have any questions or suggestions, please join our Discord server:
 
-[Join Our Discord Server](https://discord.gg/bdfd)
+[Join Our Discord Server](https://discord.gg/msidev)
