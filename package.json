@@ -1,14 +1,14 @@
 {
     "name": "msiai",
-    "version": "1.0.0",
-    "description": "Advanced artificial intelligence api service msiai",
+    "version": "2.0.0",
+    "description": "Advanced artificial intelligence free api service msiai",
     "main": "index.js",
     "scripts": {
       "test": "node test.js"
     },
     "repository": {
       "type": "git",
-      "url": "git+https://github.com/yourusername/msiai.git"
+      "url": "git+https://github.com/sadecemsi/msiai.git"
     },
     "keywords": [
       "msiai",
@@ -28,10 +28,6 @@
       "bot",
       "robot",
       "axios",
-      "gemini",
-      "gemini-api",
-      "gemini-pro",
-      "google",
       "discord-ai",
       "discordai",
       "yapay-zeka",
@@ -41,7 +37,11 @@
       "anthropic-api",
       "claude-api",
       "advanced-artificial-intelligence",
-      "artificial-intelligence"
+      "artificial-intelligence",
+      "free-ai",
+      "ucretsiz",
+      "free-api",
+      "discord-ai"
     ],
     "author": "msi",
     "license": "MIT",
