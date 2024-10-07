@@ -36,9 +36,6 @@ pip install msiai
 
 # Ruby
 gem install msiai
-
-# Go
-go get github.com/msiai/msiai-go
 ```
 
 ## 🔑 API Key
@@ -122,34 +119,6 @@ begin
 rescue => error
   puts "An error occurred: #{error.message}"
 end
-```
-
-### Go
-
-```go
-package main
-
-import (
-    "fmt"
-    "github.com/msiai/msiai-go"
-)
-
-func main() {
-    msiai := msiai.New("YOUR_API_KEY")
-
-    response, err := msiai.Chat(msiai.ChatOptions{
-        Model:  "gpt-3.5-turbo",
-        Prompt: "Explain the theory of relativity.",
-        System: "You are a physics professor.",
-    })
-
-    if err != nil {
-        fmt.Printf("An error occurred: %s\n", err)
-        return
-    }
-
-    fmt.Println(response.Reply)
-}
 ```
 
 ## 📚 Available Models
