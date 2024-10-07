@@ -22,9 +22,23 @@
 ## 📦 Installation
 
 ```bash
+# npm
 npm install msiai
+
+# yarn
 yarn add msiai
+
+# pnpm
 pnpm add msiai
+
+# Python
+pip install msiai
+
+# Ruby
+gem install msiai
+
+# Go
+go get github.com/msiai/msiai-go
 ```
 
 ## 🔑 API Key
@@ -71,6 +85,71 @@ msiai.chat({
 .catch(error => {
     console.error(error.message);
 });
+```
+
+### Python
+
+```python
+from msiai import MSIAI
+
+msiai = MSIAI('YOUR_API_KEY')
+
+try:
+    response = msiai.chat(
+        model="gpt-3.5-turbo",
+        prompt="Describe the process of photosynthesis.",
+        system="You are a biology professor."
+    )
+    print(response['reply'])
+except Exception as error:
+    print(f"An error occurred: {str(error)}")
+```
+
+### Ruby
+
+```ruby
+require 'msiai'
+
+msiai = MSIAI.new('YOUR_API_KEY')
+
+begin
+  response = msiai.chat(
+    model: "gpt-4",
+    prompt: "Write a short story about time travel.",
+    system: "You are a creative science fiction author."
+  )
+  puts response[:reply]
+rescue => error
+  puts "An error occurred: #{error.message}"
+end
+```
+
+### Go
+
+```go
+package main
+
+import (
+    "fmt"
+    "github.com/msiai/msiai-go"
+)
+
+func main() {
+    msiai := msiai.New("YOUR_API_KEY")
+
+    response, err := msiai.Chat(msiai.ChatOptions{
+        Model:  "gpt-3.5-turbo",
+        Prompt: "Explain the theory of relativity.",
+        System: "You are a physics professor.",
+    })
+
+    if err != nil {
+        fmt.Printf("An error occurred: %s\n", err)
+        return
+    }
+
+    fmt.Println(response.Reply)
+}
 ```
 
 ## 📚 Available Models
